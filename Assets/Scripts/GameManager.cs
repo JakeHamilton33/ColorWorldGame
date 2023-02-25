@@ -8,7 +8,11 @@ public class GameManager : MonoBehaviour
 
     public Transform currentCheckpoint;
 
+    private float deathCooldown;
+
     [SerializeField]private GameObject Players;
+    [SerializeField] private GameObject OrangePlayer;
+    [SerializeField] private GameObject BluePlayer;
 
     public void Awake()
     {
@@ -21,18 +25,29 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(deathCooldown > -1)
+        {
+            deathCooldown -= Time.deltaTime;
+        }
     }
 
     public void PlayDeath()
     {
-        StartCoroutine("Death");
+        if (deathCooldown <= 0)
+        {
+            StartCoroutine("Death");
+            OrangePlayer.gameObject.GetComponent<Animator>().SetTrigger("Death");
+            BluePlayer.gameObject.GetComponent<Animator>().SetTrigger("Death");
+            deathCooldown = 1.5f;
+        }
     }
 
     IEnumerator Death()
     {
-        //Play death animation
         yield return new WaitForSeconds(1.5f);
-        Instantiate(Players, currentCheckpoint.transform);
+        OrangePlayer.transform.position = currentCheckpoint.transform.position + Vector3.left;
+        BluePlayer.transform.position = currentCheckpoint.transform.position + Vector3.right;
+        OrangePlayer.gameObject.GetComponent<Animator>().Play("Idle");
+        BluePlayer.gameObject.GetComponent<Animator>().Play("Idle");
     }
 }
