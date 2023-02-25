@@ -69,6 +69,7 @@ public class PlayerMove : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.W) && isOnGround)
         {
+            this.gameObject.GetComponent<PlayerAudio>().jumpAudio();
             myBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             anim.SetTrigger("Jump");
         }
@@ -95,6 +96,7 @@ public class PlayerMove : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow) && isOnGround)
         {
+            this.gameObject.GetComponent<PlayerAudio>().jumpAudio();
             myBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             anim.SetTrigger("Jump");
         }
