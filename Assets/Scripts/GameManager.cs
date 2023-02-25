@@ -6,18 +6,16 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public Transform checkpoint;
+    public Transform currentCheckpoint;
 
-    private GameObject Players;
+    [SerializeField]private GameObject Players;
 
     public void Awake()
     {
         if(instance == null)
             instance = this;
 
-        checkpoint = GameObject.FindGameObjectWithTag("SpawnPoint").transform;
-
-        Players = GameObject.FindGameObjectWithTag("Player");
+        currentCheckpoint = GameObject.FindGameObjectWithTag("SpawnPoint").transform;
     }
 
     // Update is called once per frame
@@ -35,6 +33,6 @@ public class GameManager : MonoBehaviour
     {
         //Play death animation
         yield return new WaitForSeconds(3);
-        Players.transform.position = checkpoint.position;
+        Players.transform.position = currentCheckpoint.position;
     }
 }

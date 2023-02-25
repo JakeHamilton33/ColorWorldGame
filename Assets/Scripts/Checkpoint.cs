@@ -16,7 +16,7 @@ public class Checkpoint : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" && !obtained)
         {
-            GameManager.instance.checkpoint = gameObject.transform;
+            GameManager.instance.currentCheckpoint = gameObject.transform;
             obtained = true;
             print("Checkpoint Changed");
             anim.SetBool("Planted", true);
