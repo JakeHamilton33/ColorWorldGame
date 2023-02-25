@@ -9,6 +9,7 @@ TagManager:
   - SpawnPoint
   - Bound
   - Rune
+  - World
   layers:
   - Default
   - TransparentFX

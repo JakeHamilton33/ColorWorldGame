@@ -49,13 +49,13 @@ public class MovingPlatformScript : MonoBehaviour
     {
         if (xTime <= 0)
         {
-            if (transform.position.x > start.x + (cellX * cellsRight) && isMovingRight)
+            if (transform.position.x > start.x + (cellX * cellsRight) * transform.localScale.x && isMovingRight)
             {
                 isMovingRight = false;
                 xTime = waitTimeX;
             }
 
-            if (transform.position.x < start.x - (cellX * cellsLeft) && !isMovingRight)
+            if (transform.position.x < start.x - (cellX * cellsLeft) * transform.localScale.x && !isMovingRight)
             {
                 isMovingRight = true;
                 xTime = waitTimeX;
@@ -80,13 +80,13 @@ public class MovingPlatformScript : MonoBehaviour
     {
         if (yTime <= 0)
         {
-            if (transform.position.y > start.y + (cellY * cellsUp) && !isMovingDown)
+            if (transform.position.y > start.y + (cellY * cellsUp) * transform.localScale.y && !isMovingDown)
             {
                 isMovingDown = true;
                 yTime = waitTimeY;
             }
 
-            if (transform.position.y < start.y - (cellY * cellsDown) && isMovingDown)
+            if (transform.position.y < start.y - (cellY * cellsDown) * transform.localScale.y && isMovingDown)
             {
                 isMovingDown = false;
                 yTime = waitTimeY;
