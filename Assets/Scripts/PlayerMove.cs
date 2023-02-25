@@ -8,7 +8,7 @@ public class PlayerMove : MonoBehaviour
     
     public float speed;
     public float jumpForce;
-    public float maxSpeed;
+    public float maxVelocity;
 
     public Transform checkGround;
 
@@ -57,15 +57,14 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             myBody.AddForce(Vector2.right * speed * Time.deltaTime * 100);
-            myBody.drag = (speed * Time.deltaTime * 100) / maxSpeed;
+            myBody.drag = (speed * Time.deltaTime * 100) / maxVelocity;
             myRenderer.flipX = false;
         }
         else if (Input.GetKey(KeyCode.A))
         {
             myBody.AddForce(Vector2.left * speed * Time.deltaTime * 100);
-            myBody.drag = (speed * Time.deltaTime * 100) / maxSpeed;
+            myBody.drag = (speed * Time.deltaTime * 100) / maxVelocity;
             myRenderer.flipX = true;
-            Debug.Log(Vector2.left * speed * Time.deltaTime * 100);
         }
         if (Input.GetKeyDown(KeyCode.W) && isOnGround)
         {
@@ -79,13 +78,13 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
             myBody.AddForce(Vector2.right * speed * Time.deltaTime * 100);
-            myBody.drag = (speed * Time.deltaTime * 100) / maxSpeed;
+            myBody.drag = (speed * Time.deltaTime * 100) / maxVelocity;
             myRenderer.flipX = false;
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             myBody.AddForce(Vector2.left * speed * Time.deltaTime * 100);
-            myBody.drag = (speed * Time.deltaTime * 100) / maxSpeed;
+            myBody.drag = (speed * Time.deltaTime * 100) / maxVelocity;
             myRenderer.flipX = true;
         }
 

@@ -20347,6 +20347,10 @@ PrefabInstance:
       propertyPath: speed
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 2978176539243808160, guid: 7703d245ce4e52349bcb3f5e5f5ddd20, type: 3}
+      propertyPath: maxSpeed
+      value: 4.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7516153862280307440, guid: 7703d245ce4e52349bcb3f5e5f5ddd20, type: 3}
       propertyPath: m_Name
       value: Players
@@ -20398,6 +20402,10 @@ PrefabInstance:
     - target: {fileID: 8736660707663064668, guid: 7703d245ce4e52349bcb3f5e5f5ddd20, type: 3}
       propertyPath: speed
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8736660707663064668, guid: 7703d245ce4e52349bcb3f5e5f5ddd20, type: 3}
+      propertyPath: maxSpeed
+      value: 4.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7703d245ce4e52349bcb3f5e5f5ddd20, type: 3}
