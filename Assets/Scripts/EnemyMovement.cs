@@ -8,8 +8,7 @@ public class EnemyMovement : MonoBehaviour
     private CapsuleCollider2D enemyCollider;
     private Rigidbody2D enemyRigidBody;
     public CircleCollider2D groundcheck;
-    public CircleCollider2D wallCheck;
-    private bool isFacingLeft = true;
+    public bool isFacingLeft = true;
 
     private void Awake()
     {
@@ -29,23 +28,9 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(isFacingLeft == true)
-        {
-            this.transform.localScale = new Vector3(-1, this.transform.localScale.y, this.transform.localScale.z);
-            isFacingLeft = false;
-        }
-        else
-        {
-            this.transform.localScale = new Vector3(1, this.transform.localScale.y, this.transform.localScale.z);
-            isFacingLeft = true;
-        }
-    }
-
-    /*private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.layer == 8)
+        if(collision.tag == "Bound")
         {
             if (isFacingLeft == true)
             {
@@ -58,5 +43,5 @@ public class EnemyMovement : MonoBehaviour
                 isFacingLeft = true;
             }
         }
-    }*/
+    }
 }

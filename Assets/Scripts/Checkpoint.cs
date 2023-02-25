@@ -5,6 +5,12 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
     private bool obtained = false;
+    private Animator anim;
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,6 +19,7 @@ public class Checkpoint : MonoBehaviour
             GameManager.instance.checkpoint = gameObject.transform;
             obtained = true;
             print("Checkpoint Changed");
+            anim.SetBool("Planted", true);
         }
     }
 }

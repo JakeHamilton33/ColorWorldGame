@@ -13,11 +13,16 @@ public class PlayerMove : MonoBehaviour
 
     private bool isOnGround;
     private Rigidbody2D myBody;
+    private SpriteRenderer myRenderer;
+    private Animator anim;
     private LayerMask ground;
 
     private void Awake()
     {
         myBody = gameObject.GetComponent<Rigidbody2D>();
+        myRenderer = gameObject.GetComponent<SpriteRenderer>();
+        anim = gameObject.GetComponent<Animator>();
+
         ground |= (1 << LayerMask.NameToLayer("Ground"));
         if (player2)
         {
@@ -42,6 +47,7 @@ public class PlayerMove : MonoBehaviour
         {
             Move();
         }
+        Animate();
         
     }
 
@@ -50,10 +56,12 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
             myBody.AddForce(Vector2.right * speed * Time.deltaTime * 100);
+            myRenderer.flipX = false;
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             myBody.AddForce(Vector2.left * speed * Time.deltaTime * 100);
+            myRenderer.flipX = true;
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow) && isOnGround)
@@ -76,6 +84,7 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow) && isOnGround)
         {
             myBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            anim.SetTrigger("Jump");
         }
     }
 
@@ -90,6 +99,27 @@ public class PlayerMove : MonoBehaviour
         else
         {
             isOnGround = false;
+        }
+    }
+
+    private void Animate()
+    {
+        if(myBody.velocity.y < 0)
+        {
+            anim.SetBool("IsFalling", true);
+        }
+        else
+        {
+            anim.SetBool("IsFalling", false);
+        }
+
+        if (myBody.velocity.x != 0)
+        {
+            anim.SetBool("IsRunning", true);
+        }
+        else
+        {
+            anim.SetBool("IsRunning", false);
         }
     }
 
