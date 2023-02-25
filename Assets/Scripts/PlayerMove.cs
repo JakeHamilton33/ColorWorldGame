@@ -12,6 +12,8 @@ public class PlayerMove : MonoBehaviour
 
     public Transform checkGround;
 
+    public ParticleSystem snowySteps;
+
     private bool isOnGround;
     private GameObject currentRune;
     private Rigidbody2D myBody;
@@ -164,5 +166,10 @@ public class PlayerMove : MonoBehaviour
         {
             currentRune = null;
         }
+    }
+
+    private void spawnSnow()
+    {
+        snowySteps.Emit(5);
     }
 }
