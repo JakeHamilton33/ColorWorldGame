@@ -13,6 +13,7 @@ public class PlayerMove : MonoBehaviour
     public Transform checkGround;
 
     private bool isOnGround;
+    private GameObject currentRune;
     private Rigidbody2D myBody;
     private SpriteRenderer myRenderer;
     private Animator anim;
@@ -71,6 +72,10 @@ public class PlayerMove : MonoBehaviour
             myBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             anim.SetTrigger("Jump");
         }
+        if(Input.GetKeyDown(KeyCode.E) && currentRune != null)
+        {
+            currentRune.GetComponent<RuneScript>().swap();
+        }
     }
 
     private void Move2()
@@ -92,6 +97,10 @@ public class PlayerMove : MonoBehaviour
         {
             myBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             anim.SetTrigger("Jump");
+        }
+        if (Input.GetKeyDown(KeyCode.RightShift) && currentRune != null)
+        {
+            currentRune.GetComponent<RuneScript>().swap();
         }
     }
 
@@ -136,6 +145,22 @@ public class PlayerMove : MonoBehaviour
         if(collision.gameObject.tag == "Enemy")
         {
             GameManager.instance.PlayDeath();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Rune")
+        {
+            currentRune = collision.gameObject;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Rune")
+        {
+            currentRune = null;
         }
     }
 }

@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 959825047}
   - component: {fileID: 959825046}
   - component: {fileID: 959825045}
+  - component: {fileID: 959825048}
   m_Layer: 6
   m_Name: Ground (2)
   m_TagString: Untagged
@@ -318,6 +319,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &959825048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959825044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a202b8a4f5fba41aad8a5bf7c58726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orangePlatform: {fileID: -259884336, guid: 7fe0a80f1bb3c7b45b208335a42bd732, type: 3}
+  bluePlatform: {fileID: 1923007647, guid: 9f6f6aa24c39dd54f96ee23ccf92410a, type: 3}
 --- !u!1 &1088947981
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,7 +457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5a202b8a4f5fba41aad8a5bf7c58726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orangePlatform: {fileID: 21300000, guid: b863567afc3f0e841862e607f2715c5d, type: 3}
+  orangePlatform: {fileID: -259884336, guid: 7fe0a80f1bb3c7b45b208335a42bd732, type: 3}
   bluePlatform: {fileID: 2018334010, guid: 7fe0a80f1bb3c7b45b208335a42bd732, type: 3}
 --- !u!1001 &1474841967
 PrefabInstance:
@@ -454,6 +469,14 @@ PrefabInstance:
     - target: {fileID: 2978176539243808160, guid: 7703d245ce4e52349bcb3f5e5f5ddd20, type: 3}
       propertyPath: maxSpeed
       value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978176539243808160, guid: 7703d245ce4e52349bcb3f5e5f5ddd20, type: 3}
+      propertyPath: maxVelocity
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3024414488017684515, guid: 7703d245ce4e52349bcb3f5e5f5ddd20, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7516153862280307440, guid: 7703d245ce4e52349bcb3f5e5f5ddd20, type: 3}
       propertyPath: m_Name
@@ -507,6 +530,14 @@ PrefabInstance:
       propertyPath: maxSpeed
       value: 4.4
       objectReference: {fileID: 0}
+    - target: {fileID: 8736660707663064668, guid: 7703d245ce4e52349bcb3f5e5f5ddd20, type: 3}
+      propertyPath: maxVelocity
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8736660707663064671, guid: 7703d245ce4e52349bcb3f5e5f5ddd20, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7703d245ce4e52349bcb3f5e5f5ddd20, type: 3}
 --- !u!1 &1635978674
@@ -520,6 +551,7 @@ GameObject:
   - component: {fileID: 1635978676}
   - component: {fileID: 1635978675}
   - component: {fileID: 1635978677}
+  - component: {fileID: 1635978678}
   m_Layer: 7
   m_Name: Rune
   m_TagString: Rune
@@ -609,6 +641,22 @@ MonoBehaviour:
   SwitchablePlatforms:
   - {fileID: 1088947981}
   - {fileID: 959825044}
+--- !u!58 &1635978678
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635978674}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.06}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1746523439
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,6 +668,7 @@ GameObject:
   - component: {fileID: 1746523441}
   - component: {fileID: 1746523440}
   - component: {fileID: 1746523442}
+  - component: {fileID: 1746523443}
   m_Layer: 6
   m_Name: Rune (1)
   m_TagString: Rune
@@ -709,6 +758,22 @@ MonoBehaviour:
   SwitchablePlatforms:
   - {fileID: 1088947981}
   - {fileID: 959825044}
+--- !u!58 &1746523443
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746523439}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.06}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &2071560946
 GameObject:
   m_ObjectHideFlags: 0

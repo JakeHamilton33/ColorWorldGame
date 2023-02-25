@@ -10,7 +10,7 @@ public class RuneScript : MonoBehaviour
     {
         foreach(var i in SwitchablePlatforms)
         {
-            i.GetComponent<SwitchablePlatform>().switchColors();
+            i.gameObject.GetComponent<SwitchablePlatform>().switchColors();
         }
     }
 }
