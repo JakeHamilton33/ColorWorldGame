@@ -1022,12 +1022,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 7516153862280307441}
     m_Modifications:
     - target: {fileID: 1256614807603210568, guid: bacd81caadc7b264facf10b9ea148dca, type: 3}
+      propertyPath: jumpForce
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1256614807603210568, guid: bacd81caadc7b264facf10b9ea148dca, type: 3}
       propertyPath: maxVelocity
-      value: 4.4
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 1256614807603210571, guid: bacd81caadc7b264facf10b9ea148dca, type: 3}
       propertyPath: m_LinearDrag
-      value: 0.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1256614807603210572, guid: bacd81caadc7b264facf10b9ea148dca, type: 3}
       propertyPath: m_RootOrder
@@ -1097,12 +1101,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 7516153862280307441}
     m_Modifications:
     - target: {fileID: 4691103559894280723, guid: 411b0d8fea54f4d47a3c03aea0d7fdcb, type: 3}
+      propertyPath: jumpForce
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691103559894280723, guid: 411b0d8fea54f4d47a3c03aea0d7fdcb, type: 3}
       propertyPath: maxVelocity
-      value: 4.4
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 4735076435255945104, guid: 411b0d8fea54f4d47a3c03aea0d7fdcb, type: 3}
       propertyPath: m_LinearDrag
-      value: 0.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4735076435255945107, guid: 411b0d8fea54f4d47a3c03aea0d7fdcb, type: 3}
       propertyPath: m_RootOrder
