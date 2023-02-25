@@ -31,11 +31,11 @@ public class Player2Move : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            myBody.AddForce(Vector2.right * speed * Time.deltaTime);
+            myBody.AddForce(Vector2.right * speed * Time.deltaTime * 100);
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
-            myBody.AddForce(Vector2.left * speed * Time.deltaTime);
+            myBody.AddForce(Vector2.left * speed * Time.deltaTime * 100);
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow) && isOnGround)
