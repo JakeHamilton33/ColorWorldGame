@@ -53,18 +53,18 @@ public class PlayerMove : MonoBehaviour
 
     private void Move()
     {
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D))
         {
             myBody.AddForce(Vector2.right * speed * Time.deltaTime * 100);
             myRenderer.flipX = false;
         }
-        else if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.A))
         {
             myBody.AddForce(Vector2.left * speed * Time.deltaTime * 100);
             myRenderer.flipX = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow) && isOnGround)
+        if (Input.GetKeyDown(KeyCode.W) && isOnGround)
         {
             myBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             anim.SetTrigger("Jump");
