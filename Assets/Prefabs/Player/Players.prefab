@@ -1112,6 +1112,14 @@ PrefabInstance:
       propertyPath: m_LinearDrag
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4735076435255945105, guid: 411b0d8fea54f4d47a3c03aea0d7fdcb, type: 3}
+      propertyPath: m_Size.y
+      value: 0.20517309
+      objectReference: {fileID: 0}
+    - target: {fileID: 4735076435255945105, guid: 411b0d8fea54f4d47a3c03aea0d7fdcb, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0580454
+      objectReference: {fileID: 0}
     - target: {fileID: 4735076435255945107, guid: 411b0d8fea54f4d47a3c03aea0d7fdcb, type: 3}
       propertyPath: m_RootOrder
       value: 2
