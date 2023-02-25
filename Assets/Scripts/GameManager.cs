@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     IEnumerator Death()
     {
         //Play death animation
-        yield return new WaitForSeconds(3);
-        Players.transform.position = currentCheckpoint.position;
+        yield return new WaitForSeconds(1.5f);
+        Instantiate(Players, currentCheckpoint.transform);
     }
 }
