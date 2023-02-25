@@ -67,6 +67,7 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow) && isOnGround)
         {
             myBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            anim.SetTrigger("Jump");
         }
     }
 
@@ -75,10 +76,12 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
             myBody.AddForce(Vector2.right * speed * Time.deltaTime * 100);
+            myRenderer.flipX = false;
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             myBody.AddForce(Vector2.left * speed * Time.deltaTime * 100);
+            myRenderer.flipX = true;
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow) && isOnGround)
@@ -104,16 +107,17 @@ public class PlayerMove : MonoBehaviour
 
     private void Animate()
     {
-        if(myBody.velocity.y < 0)
+        if(myBody.velocity.y < -0.5f)
         {
             anim.SetBool("IsFalling", true);
+            anim.ResetTrigger("Jump");
         }
         else
         {
             anim.SetBool("IsFalling", false);
         }
 
-        if (myBody.velocity.x != 0)
+        if (myBody.velocity.x < -0.5f || myBody.velocity.x > 0.5f)
         {
             anim.SetBool("IsRunning", true);
         }
