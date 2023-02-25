@@ -7,7 +7,6 @@ public class EnemyMovement : MonoBehaviour
 
     private CapsuleCollider2D enemyCollider;
     private Rigidbody2D enemyRigidBody;
-    public CircleCollider2D groundcheck;
     public bool isFacingLeft = true;
 
     private void Awake()
