@@ -8,9 +8,11 @@ public class RuneScript : MonoBehaviour
 
     public void swap()
     {
-        foreach(var i in SwitchablePlatforms)
+        foreach(GameObject i in SwitchablePlatforms)
         {
-            i.gameObject.GetComponent<SwitchablePlatform>().switchColors();
+            i.GetComponent<SwitchablePlatform>().switchColors();
+            //i.gameObject.GetComponent<SwitchablePlatform>().switchColors();
+            Debug.Log("BAD!");
         }
     }
 }

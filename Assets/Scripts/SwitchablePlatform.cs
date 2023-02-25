@@ -19,11 +19,11 @@ public class SwitchablePlatform : MonoBehaviour
         {
             this.gameObject.layer = 7;
             spriteRenderer.sprite = orangePlatform;
-        }
-        if (this.gameObject.layer == 7)
-        {
+            Debug.Log("Switch!");
+        }else if (this.gameObject.layer == 7){
             this.gameObject.layer = 6;
             spriteRenderer.sprite = bluePlatform;
+            Debug.Log("Switch!!");
         }
     }
 }
