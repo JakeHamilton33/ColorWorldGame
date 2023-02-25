@@ -16,10 +16,12 @@ public class MovingPlatformScript : MonoBehaviour
     private Vector3 start;
     private bool isMovingRight;
     private bool isMovingDown;
-    private float speed = 3f;
+    public float speed;
     private Grid worldgrid;
     private float cellX;
     private float cellY;
+    private float xTime = 0;
+    private float yTime = 0;
 
     private void Awake()
     {
@@ -45,45 +47,62 @@ public class MovingPlatformScript : MonoBehaviour
 
     private void MoveX()
     {
-        if (transform.position.x > start.x + (cellX * cellsRight))
+        if (xTime <= 0)
         {
-            isMovingRight = false;
-        }
-            
-        if (transform.position.x < start.x - (cellX * cellsLeft))
-        {
-            isMovingRight = true;
-        }
-            
-        if (isMovingRight)
-        {
-            transform.Translate(Vector2.right * speed * Time.deltaTime);
+            if (transform.position.x > start.x + (cellX * cellsRight) && isMovingRight)
+            {
+                isMovingRight = false;
+                xTime = waitTimeX;
+            }
+
+            if (transform.position.x < start.x - (cellX * cellsLeft) && !isMovingRight)
+            {
+                isMovingRight = true;
+                xTime = waitTimeX;
+            }
+
+            if (isMovingRight)
+            {
+                transform.Translate(Vector2.right * speed * Time.deltaTime);
+            }
+            else
+            {
+                transform.Translate(Vector2.left * speed * Time.deltaTime);
+            }
         }
         else
         {
-            transform.Translate(Vector2.left * speed * Time.deltaTime);
+            xTime -= Time.deltaTime;
         }
     }
 
     private void MoveY()
     {
-        if (transform.position.y > start.y + (cellY * cellsUp))
+        if (yTime <= 0)
         {
-            isMovingDown = true;
-        }
+            if (transform.position.y > start.y + (cellY * cellsUp) && !isMovingDown)
+            {
+                isMovingDown = true;
+                yTime = waitTimeY;
+            }
 
-        if (transform.position.y < start.y - (cellY * cellsDown))
-        {
-            isMovingDown = false;
-        }
+            if (transform.position.y < start.y - (cellY * cellsDown) && isMovingDown)
+            {
+                isMovingDown = false;
+                yTime = waitTimeY;
+            }
 
-        if (isMovingDown)
+            if (isMovingDown)
+            {
+                transform.Translate(Vector2.down * speed * Time.deltaTime);
+            }
+            else
+            {
+                transform.Translate(Vector2.up * speed * Time.deltaTime);
+            }
+        } else
         {
-            transform.Translate(Vector2.down * speed * Time.deltaTime);
-        }
-        else
-        {
-            transform.Translate(Vector2.up * speed * Time.deltaTime);
+            yTime -= Time.deltaTime;
         }
     }
 }
