@@ -43,8 +43,8 @@ GameObject:
   - component: {fileID: 3453311364909360712}
   - component: {fileID: 3453311364909360725}
   - component: {fileID: 3453311364909360724}
-  - component: {fileID: 3453311364909360727}
   - component: {fileID: 3453311364909360726}
+  - component: {fileID: 1178747434097966644}
   m_Layer: 6
   m_Name: PlayerOrange
   m_TagString: Player
@@ -157,21 +157,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.012532711, y: -0.063745365}
   m_Size: {x: 0.16272068, y: 0.21657303}
   m_Direction: 0
---- !u!114 &3453311364909360727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3453311364909360713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a255fe1102f1bd46afd5458ee0ba913, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 40
-  jumpForce: 35
-  checkGround: {fileID: 3453311363975703490}
 --- !u!61 &3453311364909360726
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -198,3 +183,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2135351, y: 0.057640016}
   m_EdgeRadius: 0
+--- !u!114 &1178747434097966644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453311364909360713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12077cbd8a65a1f46895de605c81dc34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player2: 0
+  speed: 35
+  jumpForce: 40
+  checkGround: {fileID: 3453311363975703490}
