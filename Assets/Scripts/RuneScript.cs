@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class RuneScript : MonoBehaviour
 {
-    public GameObject[] SwitchablePlatforms;
+    [SerializeField][HideInInspector] private Tilemap OrangeTileset, BlueTileset;
+
+    [SerializeField][HideInInspector] private AnimatedTile RedL, RedBridgeL, RedM, RedBridgeR, RedR, BlueL, BlueBridgeL, BlueM, BlueBridgeR, BlueR;
 
     public void swap()
     {
-        foreach(GameObject i in SwitchablePlatforms)
-        {
-            i.GetComponent<SwitchablePlatform>().switchColors();
-            //i.gameObject.GetComponent<SwitchablePlatform>().switchColors();
-            Debug.Log("BAD!");
-        }
+        
     }
 }

@@ -3,7 +3,17 @@ guid: eea92da58f730a044a922f081805559a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - RedL: {fileID: 11400000, guid: b649e790571a0014ca29c25b6963cecd, type: 2}
+  - RedBridgeL: {fileID: 11400000, guid: 8ea1278be64d3fa43bd5e0d0134251b3, type: 2}
+  - RedM: {fileID: 11400000, guid: 799792c0f237b6c438eb615f29bb1f1f, type: 2}
+  - RedBridgeR: {fileID: 11400000, guid: 1f92819b6565efa4487e4787b5c0784f, type: 2}
+  - RedR: {fileID: 11400000, guid: 57497528ad9c8bc40850a71086b4d105, type: 2}
+  - BlueL: {fileID: 11400000, guid: b9dba0ae68f294b4eb297190862a140f, type: 2}
+  - BlueBridgeL: {fileID: 11400000, guid: 1c283a2ee344de449a83d4e6500c9f86, type: 2}
+  - BlueM: {fileID: 11400000, guid: 18b45caa7bd1574438447a4bf9464dc0, type: 2}
+  - BlueBridgeR: {fileID: 11400000, guid: 6a42c44553288bd4a9b1b95bcad8517f, type: 2}
+  - BlueR: {fileID: 11400000, guid: 00a52bd1db8ea3042902610554610c24, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
