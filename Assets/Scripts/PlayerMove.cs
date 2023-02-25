@@ -30,11 +30,11 @@ public class PlayerMove : MonoBehaviour
         ground |= (1 << LayerMask.NameToLayer("Ground"));
         if (player2)
         {
-            ground |= (1 << LayerMask.NameToLayer("Player 1"));
+            ground |= (1 << LayerMask.NameToLayer("Orange"));
         }
         else
         {
-            ground |= (1 << LayerMask.NameToLayer("Player 2"));
+            ground |= (1 << LayerMask.NameToLayer("Blue"));
         }
         
     }
