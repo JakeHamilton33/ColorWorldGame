@@ -14,7 +14,7 @@ public class Checkpoint : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && !obtained)
+        if ((collision.gameObject.tag == "Player" || collision.gameObject.tag == "Player 2")  && !obtained)
         {
             GameManager.instance.currentCheckpoint = gameObject.transform;
             obtained = true;
