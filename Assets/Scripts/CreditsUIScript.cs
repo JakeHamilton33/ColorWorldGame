@@ -38,11 +38,13 @@ public class CreditsUIScript : MonoBehaviour
 
         while (alphaValue > 0)
         {
-            alphaValue -= .08f;
+            alphaValue -= .01f;
             tmp.a = alphaValue;
             panelImage.color = tmp;
 
-            yield return new WaitForSeconds(.2f);
+            yield return new WaitForSeconds(.05f);
         }
+
+
     }
 }
