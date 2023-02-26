@@ -17,6 +17,7 @@ public class Checkpoint : MonoBehaviour
         if ((collision.gameObject.tag == "Player" || collision.gameObject.tag == "Player 2")  && !obtained)
         {
             GameManager.instance.currentCheckpoint = gameObject.transform;
+            FindObjectOfType<AudioManager>().play("FlagRaise");
             obtained = true;
             anim.SetBool("Planted", true);
         }

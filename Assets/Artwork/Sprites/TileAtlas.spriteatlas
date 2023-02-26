@@ -66,6 +66,7 @@ SpriteAtlas:
   - {fileID: -168107111, guid: 80344171d8b6e604a8b0f08a9dc16fba, type: 3}
   - {fileID: 1025796468, guid: 80344171d8b6e604a8b0f08a9dc16fba, type: 3}
   - {fileID: -1344807608, guid: 80344171d8b6e604a8b0f08a9dc16fba, type: 3}
+  - {fileID: 21300000, guid: 2441127153a2dbc408e3c18bc5179f4c, type: 3}
   - {fileID: 21300000, guid: 4766ed026a16b5e468e054da31b9c792, type: 3}
   - {fileID: -260676448, guid: 9f6f6aa24c39dd54f96ee23ccf92410a, type: 3}
   - {fileID: 2093446839, guid: 9f6f6aa24c39dd54f96ee23ccf92410a, type: 3}
@@ -491,6 +492,7 @@ SpriteAtlas:
   - Star-Sheet_5
   - Star-Sheet_6
   - Star-Sheet_7
+  - HeartIcon
   - Title
   - Blue-Char-Sheet_16
   - Blue-Char-Sheet_17

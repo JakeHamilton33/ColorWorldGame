@@ -70,12 +70,13 @@ public class PlayerMove : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.W) && isOnGround)
         {
-            this.gameObject.GetComponent<PlayerAudio>().jump1Audio();
+            FindObjectOfType<AudioManager>().play("Jump1");
             myBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             anim.SetTrigger("Jump");
         }
         if(Input.GetKeyDown(KeyCode.E) && currentRune != null)
         {
+            FindObjectOfType<AudioManager>().play("Rune");
             currentRune.GetComponent<RuneScript>().swap();
         }
     }
@@ -97,12 +98,13 @@ public class PlayerMove : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow) && isOnGround)
         {
-            this.gameObject.GetComponent<PlayerAudio>().jump2Audio();
+            FindObjectOfType<AudioManager>().play("Jump2");
             myBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             anim.SetTrigger("Jump");
         }
         if (Input.GetKeyDown(KeyCode.RightShift) && currentRune != null)
         {
+            FindObjectOfType<AudioManager>().play("Rune");
             currentRune.GetComponent<RuneScript>().swap();
         }
     }
@@ -147,6 +149,7 @@ public class PlayerMove : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy")
         {
+            FindObjectOfType<AudioManager>().play("Death");
             GameManager.instance.PlayDeath();
         }
     }
