@@ -15,7 +15,7 @@ public class PlayerMove : MonoBehaviour
     public ParticleSystem snowySteps;
 
     private bool isOnGround;
-    private GameObject currentRune;
+    [SerializeField]private GameObject currentRune;
     private Rigidbody2D myBody;
     private SpriteRenderer myRenderer;
     private Animator anim;
