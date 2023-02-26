@@ -65,15 +65,15 @@ public class GameManager : MonoBehaviour
 
     public void Pause()
     {
+        pause.gameObject.SetActive(false);
+        play.gameObject.SetActive(true);
         Time.timeScale = 0;
-        pause.enabled = false;
-        play.enabled = true;
     }
 
     public void Play()
     {
         Time.timeScale = 1;
-        pause.enabled = true;
-        play.enabled = false;
+        pause.gameObject.SetActive(true);
+        play.gameObject.SetActive(false);
     }
 }
