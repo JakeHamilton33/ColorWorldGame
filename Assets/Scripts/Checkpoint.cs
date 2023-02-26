@@ -18,7 +18,6 @@ public class Checkpoint : MonoBehaviour
         {
             GameManager.instance.currentCheckpoint = gameObject.transform;
             obtained = true;
-            print("Checkpoint Changed");
             anim.SetBool("Planted", true);
         }
     }
