@@ -371,6 +371,71 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &757618753
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2777740488182441456, guid: e91b241b420407242905a96c936f3916, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777740488182441456, guid: e91b241b420407242905a96c936f3916, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777740488182441456, guid: e91b241b420407242905a96c936f3916, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777740488182441456, guid: e91b241b420407242905a96c936f3916, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777740488182441456, guid: e91b241b420407242905a96c936f3916, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.2742763
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777740488182441456, guid: e91b241b420407242905a96c936f3916, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.27428758
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777740488182441456, guid: e91b241b420407242905a96c936f3916, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.651741
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777740488182441456, guid: e91b241b420407242905a96c936f3916, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.6517458
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777740488182441456, guid: e91b241b420407242905a96c936f3916, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -315.647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777740488182441456, guid: e91b241b420407242905a96c936f3916, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777740488182441456, guid: e91b241b420407242905a96c936f3916, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777740488182441457, guid: e91b241b420407242905a96c936f3916, type: 3}
+      propertyPath: prewarm
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777740488182441457, guid: e91b241b420407242905a96c936f3916, type: 3}
+      propertyPath: startDelay.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777740488182441463, guid: e91b241b420407242905a96c936f3916, type: 3}
+      propertyPath: m_Name
+      value: LightSnowParticles
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e91b241b420407242905a96c936f3916, type: 3}
 --- !u!1 &956099683
 GameObject:
   m_ObjectHideFlags: 0
