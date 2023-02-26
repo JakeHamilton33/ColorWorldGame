@@ -1,16 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public int starsColleted;
     public Transform currentCheckpoint;
+
+    public Button pause;
+    public Button play;
 
     private float deathCooldown;
 
-    [SerializeField]private GameObject Players;
     [SerializeField] private GameObject OrangePlayer;
     [SerializeField] private GameObject BluePlayer;
 
@@ -49,5 +53,27 @@ public class GameManager : MonoBehaviour
         BluePlayer.transform.position = currentCheckpoint.transform.position + Vector3.right;
         OrangePlayer.gameObject.GetComponent<Animator>().Play("Idle");
         BluePlayer.gameObject.GetComponent<Animator>().Play("Idle");
+    }
+
+    public void Reset()
+    {
+        OrangePlayer.transform.position = currentCheckpoint.transform.position + Vector3.left;
+        BluePlayer.transform.position = currentCheckpoint.transform.position + Vector3.right;
+        OrangePlayer.gameObject.GetComponent<Animator>().Play("Idle");
+        BluePlayer.gameObject.GetComponent<Animator>().Play("Idle");
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0;
+        pause.enabled = false;
+        play.enabled = true;
+    }
+
+    public void Play()
+    {
+        Time.timeScale = 1;
+        pause.enabled = true;
+        play.enabled = false;
     }
 }
