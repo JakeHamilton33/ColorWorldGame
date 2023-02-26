@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RopeScript : MonoBehaviour
 {
-    [SerializeField] private GameObject player1, player2;
+    [SerializeField] private GameObject player1, player2, heart;
 
     private LineRenderer lineRenderer;
 
@@ -17,7 +17,10 @@ public class RopeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        lineRenderer.SetPosition(0, player1.transform.localPosition);
-        lineRenderer.SetPosition(1, player2.transform.localPosition);
+        lineRenderer.SetPosition(0, new Vector3(player1.transform.localPosition.x, player1.transform.localPosition.y - 0.5f, -1f));
+        lineRenderer.SetPosition(1, new Vector3(player2.transform.localPosition.x, player2.transform.localPosition.y - 0.5f, -1f));
+
+        heart.transform.position = new Vector3(Mathf.Lerp(player1.transform.position.x, player2.transform.position.x, 0.5f), Mathf.Lerp(player1.transform.position.y, player2.transform.position.y, 0.5f)-0.5f, -1.5f);
+
     }
 }
