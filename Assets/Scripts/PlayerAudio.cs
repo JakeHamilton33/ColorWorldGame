@@ -7,6 +7,7 @@ public class PlayerAudio : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip step;
     public AudioClip jump;
+    public AudioClip longFall;
 
     private void playAudio(AudioClip clip)
     {
@@ -22,5 +23,10 @@ public class PlayerAudio : MonoBehaviour
     public void jumpAudio()
     {
         playAudio(jump);
+    }
+
+    public void longFallAudio()
+    {
+        playAudio(longFall);
     }
 }
