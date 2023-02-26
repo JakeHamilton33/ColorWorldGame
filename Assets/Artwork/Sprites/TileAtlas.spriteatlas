@@ -208,7 +208,6 @@ SpriteAtlas:
   - {fileID: -13001421, guid: 46d4bfd6d9621a34fae0341d673e3d91, type: 3}
   - {fileID: -371849344, guid: 46d4bfd6d9621a34fae0341d673e3d91, type: 3}
   - {fileID: 22581085, guid: 46d4bfd6d9621a34fae0341d673e3d91, type: 3}
-  - {fileID: -287986033, guid: 46d4bfd6d9621a34fae0341d673e3d91, type: 3}
   - {fileID: -542830319, guid: e32962f601fcf9d488dfb0792379115e, type: 3}
   - {fileID: -1092699711, guid: e32962f601fcf9d488dfb0792379115e, type: 3}
   - {fileID: -812286008, guid: e32962f601fcf9d488dfb0792379115e, type: 3}
@@ -535,7 +534,6 @@ SpriteAtlas:
   - Title_Screen_Char-Sheet_1
   - Title_Screen_Char-Sheet_8
   - Title_Screen_Char-Sheet_9
-  - Title_Screen_Char-Sheet_10
   - BlueDoor
   - RedDoor
   - Tile_Map_83
