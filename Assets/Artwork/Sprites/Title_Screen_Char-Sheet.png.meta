@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,10 +108,10 @@ TextureImporter:
       name: Title_Screen_Char-Sheet_0
       rect:
         serializedVersion: 2
-        x: 123
-        y: 119
-        width: 36
-        height: 32
+        x: 0
+        y: 108
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,10 +129,10 @@ TextureImporter:
       name: Title_Screen_Char-Sheet_1
       rect:
         serializedVersion: 2
-        x: 315
-        y: 119
-        width: 35
-        height: 32
+        x: 192
+        y: 108
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,10 +150,10 @@ TextureImporter:
       name: Title_Screen_Char-Sheet_2
       rect:
         serializedVersion: 2
-        x: 507
-        y: 119
-        width: 34
-        height: 31
+        x: 384
+        y: 108
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,10 +171,10 @@ TextureImporter:
       name: Title_Screen_Char-Sheet_3
       rect:
         serializedVersion: 2
-        x: 699
-        y: 119
-        width: 34
-        height: 32
+        x: 576
+        y: 108
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,10 +192,10 @@ TextureImporter:
       name: Title_Screen_Char-Sheet_4
       rect:
         serializedVersion: 2
-        x: 891
-        y: 119
-        width: 35
-        height: 32
+        x: 768
+        y: 108
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,10 +213,10 @@ TextureImporter:
       name: Title_Screen_Char-Sheet_5
       rect:
         serializedVersion: 2
-        x: 1083
-        y: 119
-        width: 35
-        height: 33
+        x: 960
+        y: 108
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,10 +234,10 @@ TextureImporter:
       name: Title_Screen_Char-Sheet_6
       rect:
         serializedVersion: 2
-        x: 1275
-        y: 119
-        width: 36
-        height: 33
+        x: 1152
+        y: 108
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,10 +255,10 @@ TextureImporter:
       name: Title_Screen_Char-Sheet_7
       rect:
         serializedVersion: 2
-        x: 99
-        y: 6
-        width: 58
-        height: 36
+        x: 0
+        y: 0
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,10 +276,10 @@ TextureImporter:
       name: Title_Screen_Char-Sheet_8
       rect:
         serializedVersion: 2
-        x: 291
+        x: 192
         y: 0
-        width: 27
-        height: 31
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,10 +297,10 @@ TextureImporter:
       name: Title_Screen_Char-Sheet_9
       rect:
         serializedVersion: 2
-        x: 315
-        y: 4
-        width: 8
-        height: 9
+        x: 384
+        y: 0
+        width: 192
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,27 +310,6 @@ TextureImporter:
       bones: []
       spriteID: 3c973e427c670004b9f277f72a016179
       internalID: 22581085
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Title_Screen_Char-Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 511
-        y: 8
-        width: 4
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1afe04369f867614396d50fe4e31f1ce
-      internalID: -287986033
       vertices: []
       indices: 
       edges: []
@@ -356,7 +335,6 @@ TextureImporter:
       Title_Screen_Char-Sheet_6: 1639384615
       Title_Screen_Char-Sheet_3: 664150570
       Title_Screen_Char-Sheet_1: -13001421
-      Title_Screen_Char-Sheet_10: -287986033
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

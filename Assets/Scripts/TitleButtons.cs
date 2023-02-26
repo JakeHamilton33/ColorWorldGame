@@ -9,9 +9,23 @@ public class TitleButtons : MonoBehaviour
     public Image ImageRenderer;
     public ParticleSystem particles;
     public Slider audioSlider;
+    public Animator titleAnim;
 
     public void startGame()
     {
+        titleAnim.SetTrigger("Fall");
+        StartCoroutine("Fade");
+    }
+
+    IEnumerator Fade()
+    {
+        yield return new WaitForSeconds(1.5f);
+        while(CircleWipeController.instance._radius > 0)
+        {
+            CircleWipeController.instance._radius -= 0.01f;
+            yield return new WaitForSeconds(0.1f);
+        }
+
         SceneManager.LoadScene("Main Scene");
     }
 
