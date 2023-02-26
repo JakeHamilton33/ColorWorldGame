@@ -159,7 +159,7 @@ public class PlayerMove : MonoBehaviour
         }
         if(collision.gameObject.tag == "EndPoint")
         {
-            //Invoke(GameManager.instance.WinGame(), 0f);
+            GameManager.instance.PlayWin();
         }
     }
 

@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject OrangePlayer;
     [SerializeField] private GameObject BluePlayer;
+    [SerializeField] private GameObject cinemachineCamera;
 
     public void Awake()
     {
@@ -34,6 +35,10 @@ public class GameManager : MonoBehaviour
             deathCooldown -= Time.deltaTime;
         }
     }
+    public void PlayWin()
+    {
+        StartCoroutine(nameof(WinGame));
+    }
 
     public void PlayDeath()
     {
@@ -46,6 +51,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
     IEnumerator Death()
     {
         yield return new WaitForSeconds(1.5f);
@@ -53,6 +59,21 @@ public class GameManager : MonoBehaviour
         BluePlayer.transform.position = currentCheckpoint.transform.position + Vector3.right;
         OrangePlayer.gameObject.GetComponent<Animator>().Play("Idle");
         BluePlayer.gameObject.GetComponent<Animator>().Play("Idle");
+    }
+    IEnumerator WinGame()
+    {
+        Debug.Log("WinGame Called");
+        OrangePlayer.GetComponent<PlayerMove>().enabled = false;
+        BluePlayer.GetComponent<PlayerMove>().enabled = false;
+
+        cinemachineCamera.SetActive(false);
+
+        OrangePlayer.transform.Translate(Vector3.right);
+        BluePlayer.transform.Translate(Vector3.right);
+
+
+        yield return new WaitForSeconds(2.0f);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("CreditScene");
     }
 
     public void Reset()
