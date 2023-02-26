@@ -8,6 +8,7 @@ public class TitleButtons : MonoBehaviour
 {
     public Image ImageRenderer;
     public ParticleSystem particles;
+    public Slider audioSlider;
 
     public void startGame()
     {
@@ -17,6 +18,17 @@ public class TitleButtons : MonoBehaviour
     public void quitGame()
     {
         Application.Quit();
+    }
+
+    public void showBar()
+    {
+        if (audioSlider.IsActive())
+        {
+            audioSlider.gameObject.SetActive(false);
+        }else if(audioSlider.IsActive() == false)
+        {
+            audioSlider.gameObject.SetActive(true);
+        }
     }
 
     public void startFadeIn()
