@@ -198,7 +198,17 @@ SpriteAtlas:
   - {fileID: 265555431, guid: a7f87f6691fbf794f96b5087620efb27, type: 3}
   - {fileID: -1145971583, guid: a7f87f6691fbf794f96b5087620efb27, type: 3}
   - {fileID: -1473082683, guid: a7f87f6691fbf794f96b5087620efb27, type: 3}
-  - {fileID: 21300000, guid: 46d4bfd6d9621a34fae0341d673e3d91, type: 3}
+  - {fileID: 1639384615, guid: 46d4bfd6d9621a34fae0341d673e3d91, type: 3}
+  - {fileID: -2137366605, guid: 46d4bfd6d9621a34fae0341d673e3d91, type: 3}
+  - {fileID: 1385116450, guid: 46d4bfd6d9621a34fae0341d673e3d91, type: 3}
+  - {fileID: -1951814062, guid: 46d4bfd6d9621a34fae0341d673e3d91, type: 3}
+  - {fileID: 1305033429, guid: 46d4bfd6d9621a34fae0341d673e3d91, type: 3}
+  - {fileID: 664150570, guid: 46d4bfd6d9621a34fae0341d673e3d91, type: 3}
+  - {fileID: 719267202, guid: 46d4bfd6d9621a34fae0341d673e3d91, type: 3}
+  - {fileID: -13001421, guid: 46d4bfd6d9621a34fae0341d673e3d91, type: 3}
+  - {fileID: -371849344, guid: 46d4bfd6d9621a34fae0341d673e3d91, type: 3}
+  - {fileID: 22581085, guid: 46d4bfd6d9621a34fae0341d673e3d91, type: 3}
+  - {fileID: -287986033, guid: 46d4bfd6d9621a34fae0341d673e3d91, type: 3}
   - {fileID: -542830319, guid: e32962f601fcf9d488dfb0792379115e, type: 3}
   - {fileID: -1092699711, guid: e32962f601fcf9d488dfb0792379115e, type: 3}
   - {fileID: -812286008, guid: e32962f601fcf9d488dfb0792379115e, type: 3}
@@ -515,7 +525,17 @@ SpriteAtlas:
   - Magic_Platforms-Sheet 1_4
   - Magic_Platforms-Sheet 1_9
   - Magic_Platforms-Sheet 1_8
-  - Title_Screen_Char-Sheet
+  - Title_Screen_Char-Sheet_6
+  - Title_Screen_Char-Sheet_7
+  - Title_Screen_Char-Sheet_4
+  - Title_Screen_Char-Sheet_5
+  - Title_Screen_Char-Sheet_2
+  - Title_Screen_Char-Sheet_3
+  - Title_Screen_Char-Sheet_0
+  - Title_Screen_Char-Sheet_1
+  - Title_Screen_Char-Sheet_8
+  - Title_Screen_Char-Sheet_9
+  - Title_Screen_Char-Sheet_10
   - BlueDoor
   - RedDoor
   - Tile_Map_83
