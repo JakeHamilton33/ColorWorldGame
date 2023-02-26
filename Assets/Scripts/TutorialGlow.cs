@@ -11,7 +11,6 @@ public class TutorialGlow : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player" || collision.gameObject.tag == "Player 2")
         {
-            Debug.Log("hi");
             StartCoroutine(FadeTo());
             particles.Play();
             Destroy(this.gameObject.GetComponent<Collider2D>());
