@@ -10,6 +10,7 @@ TagManager:
   - Bound
   - Rune
   - World
+  - EndPoint
   layers:
   - Default
   - TransparentFX

@@ -157,6 +157,10 @@ public class PlayerMove : MonoBehaviour
         {
             currentRune = collision.gameObject;
         }
+        if(collision.gameObject.tag == "EndPoint")
+        {
+            Invoke(GameManager.instance.WinGame(), 0f);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
