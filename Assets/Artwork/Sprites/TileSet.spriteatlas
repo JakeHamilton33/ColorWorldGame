@@ -50,6 +50,9 @@ SpriteAtlas:
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: 0ff964b096a25d543a178ef037bb72bf, type: 3}
+  - {fileID: 21300000, guid: 80344171d8b6e604a8b0f08a9dc16fba, type: 3}
+  - {fileID: 21300000, guid: 4766ed026a16b5e468e054da31b9c792, type: 3}
   - {fileID: -260676448, guid: 9f6f6aa24c39dd54f96ee23ccf92410a, type: 3}
   - {fileID: 2093446839, guid: 9f6f6aa24c39dd54f96ee23ccf92410a, type: 3}
   - {fileID: -522668432, guid: 9f6f6aa24c39dd54f96ee23ccf92410a, type: 3}
@@ -166,6 +169,7 @@ SpriteAtlas:
   - {fileID: 265555431, guid: a7f87f6691fbf794f96b5087620efb27, type: 3}
   - {fileID: -1145971583, guid: a7f87f6691fbf794f96b5087620efb27, type: 3}
   - {fileID: -1473082683, guid: a7f87f6691fbf794f96b5087620efb27, type: 3}
+  - {fileID: 21300000, guid: 46d4bfd6d9621a34fae0341d673e3d91, type: 3}
   - {fileID: -542830319, guid: e32962f601fcf9d488dfb0792379115e, type: 3}
   - {fileID: -1092699711, guid: e32962f601fcf9d488dfb0792379115e, type: 3}
   - {fileID: -812286008, guid: e32962f601fcf9d488dfb0792379115e, type: 3}
@@ -288,6 +292,7 @@ SpriteAtlas:
   - {fileID: 146647566, guid: c37a92b815515bf4da6114972e6ae1f9, type: 3}
   - {fileID: -80682027, guid: c37a92b815515bf4da6114972e6ae1f9, type: 3}
   - {fileID: 21300000, guid: 5674ff79c57691843a5e3d88b1adeaa0, type: 3}
+  - {fileID: 21300000, guid: abe17a8bcdb043b40b7da960d3fa78a6, type: 3}
   - {fileID: 21300000, guid: 2d3b954cd6f203e4c95fd65004502136, type: 3}
   - {fileID: 1558142893, guid: fb78d3fc911e3c5489c72a921bfda7dd, type: 3}
   - {fileID: -574445190, guid: fb78d3fc911e3c5489c72a921bfda7dd, type: 3}
@@ -321,6 +326,9 @@ SpriteAtlas:
   - {fileID: 1833254821, guid: 7fe0a80f1bb3c7b45b208335a42bd732, type: 3}
   - {fileID: 21300000, guid: 2431b4cf02ccfce48ad688d7326c3ae9, type: 3}
   m_PackedSpriteNamesToIndex:
+  - Title_Screen_Icons
+  - Star-Sheet
+  - Title
   - Blue-Char-Sheet_16
   - Blue-Char-Sheet_17
   - Blue-Char-Sheet_14
@@ -437,6 +445,7 @@ SpriteAtlas:
   - Magic_Platforms-Sheet 1_4
   - Magic_Platforms-Sheet 1_9
   - Magic_Platforms-Sheet 1_8
+  - Title_Screen_Char-Sheet
   - BlueDoor
   - RedDoor
   - Tile_Map_83
@@ -559,6 +568,7 @@ SpriteAtlas:
   - Magic_Platforms-Sheet_22
   - Magic_Platforms-Sheet_23
   - rope 1
+  - Title_Screen
   - Icicle
   - Tile_walls_0
   - Tile_walls_1
