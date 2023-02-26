@@ -10,14 +10,18 @@ public class GameManager : MonoBehaviour
     public int starsColleted;
     public Transform currentCheckpoint;
 
+    [Header("Buttons")]
     public Button pause;
     public Button play;
 
     private float deathCooldown;
+    private bool growPanel;
 
+    [Header("Level Win Handling")]
     [SerializeField] private GameObject OrangePlayer;
     [SerializeField] private GameObject BluePlayer;
     [SerializeField] private GameObject cinemachineCamera;
+    [SerializeField] private GameObject panel;
 
     public void Awake()
     {
@@ -27,12 +31,32 @@ public class GameManager : MonoBehaviour
         currentCheckpoint = GameObject.FindGameObjectWithTag("SpawnPoint").transform;
     }
 
+    private void Start()
+    {
+        Image image = panel.GetComponent<Image>();
+        Color tempCol = image.color;
+        tempCol.a = 0f;
+        image.color = tempCol;
+    }
+
     // Update is called once per frame
     void Update()
     {
         if(deathCooldown > -1)
         {
             deathCooldown -= Time.deltaTime;
+        }
+
+        if (growPanel)
+        {
+            Image image = panel.GetComponent<Image>();
+            Color tempCol = image.color;
+            tempCol.a += 0.001f;
+            image.color = tempCol;
+
+            Transform panelPos = panel.transform;
+            Transform tempPos = panelPos;
+            tempPos.localScale += new Vector3(0.01f, 0.01f, 0f);
         }
     }
     public void PlayWin()
@@ -65,11 +89,15 @@ public class GameManager : MonoBehaviour
         Debug.Log("WinGame Called");
         OrangePlayer.GetComponent<PlayerMove>().enabled = false;
         BluePlayer.GetComponent<PlayerMove>().enabled = false;
+        OrangePlayer.GetComponentInParent<LineRenderer>().enabled = false;
 
         cinemachineCamera.SetActive(false);
 
         OrangePlayer.transform.Translate(Vector3.right);
         BluePlayer.transform.Translate(Vector3.right);
+
+        panel.SetActive(true);
+        growPanel = true;
 
 
         yield return new WaitForSeconds(2.0f);

@@ -451,6 +451,7 @@ SpriteAtlas:
   - {fileID: -977005235, guid: 646dfccd3840e3146acecbbce17c82cb, type: 3}
   - {fileID: 883294846, guid: 646dfccd3840e3146acecbbce17c82cb, type: 3}
   - {fileID: 425993339, guid: 646dfccd3840e3146acecbbce17c82cb, type: 3}
+  - {fileID: 21300000, guid: 4012f0dd09677834eb763135387e3dfa, type: 3}
   - {fileID: -1078010383, guid: c94fa22e7b66cd24db17c87088a01d1e, type: 3}
   - {fileID: -1565933024, guid: c94fa22e7b66cd24db17c87088a01d1e, type: 3}
   - {fileID: 1509088456, guid: c94fa22e7b66cd24db17c87088a01d1e, type: 3}
@@ -877,6 +878,7 @@ SpriteAtlas:
   - Tutorial_Stones-Sheet_0
   - Tutorial_Stones-Sheet_3
   - Tutorial_Stones-Sheet_2
+  - Circle
   - Outside_Background-Sheet_0
   - Outside_Background-Sheet_1
   - Outside_Background-Sheet_2
