@@ -800,6 +800,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7c587a7fde31c94e96b93dec645759d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds:
+  - name: LongFall
+    clip: {fileID: 8300000, guid: 58a3acb31e6a1204084c9032c8d551d2, type: 3}
+    Volume: 1
 --- !u!4 &1006614780
 Transform:
   m_ObjectHideFlags: 0
