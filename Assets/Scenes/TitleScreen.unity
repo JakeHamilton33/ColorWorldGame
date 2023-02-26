@@ -804,6 +804,43 @@ MonoBehaviour:
   - name: LongFall
     clip: {fileID: 8300000, guid: 58a3acb31e6a1204084c9032c8d551d2, type: 3}
     Volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: HeartLine
+    clip: {fileID: 8300000, guid: f6a7638140f347b4e89c9ff5016e7d44, type: 3}
+    Volume: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Death
+    clip: {fileID: 8300000, guid: 425cd837bffddc844860867c76c27869, type: 3}
+    Volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: FlagRaise
+    clip: {fileID: 8300000, guid: aa2a1adf47517504ba705d4ffe81c95c, type: 3}
+    Volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Jump1
+    clip: {fileID: 8300000, guid: 596aa28750cb58b438cdbfc81b364e64, type: 3}
+    Volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Jump2
+    clip: {fileID: 8300000, guid: a420880235fc87f4b98dd8f9087091c7, type: 3}
+    Volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Step1
+    clip: {fileID: 8300000, guid: 0023a386b65291840bf249324f88d5eb, type: 3}
+    Volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Step2
+    clip: {fileID: 8300000, guid: 6eab3025c15321d438400284d14aaaac, type: 3}
+    Volume: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &1006614780
 Transform:
   m_ObjectHideFlags: 0

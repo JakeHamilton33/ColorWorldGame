@@ -4,29 +4,27 @@ using UnityEngine;
 
 public class PlayerAudio : MonoBehaviour
 {
-    public AudioSource audioSource;
-    public AudioClip step;
-    public AudioClip jump;
-    public AudioClip longFall;
-
-    private void playAudio(AudioClip clip)
+    public void step1Audio()
     {
-        audioSource.clip = clip;
-        audioSource.Play();
+        FindObjectOfType<AudioManager>().play("Step1");
     }
 
-    public void stepAudio()
+    public void step2Audio()
     {
-        playAudio(step);
+        FindObjectOfType<AudioManager>().play("Step2");
     }
 
-    public void jumpAudio()
+    public void jump1Audio()
     {
-        playAudio(jump);
+        FindObjectOfType<AudioManager>().play("Jump1");
+    }
+    public void jump2Audio()
+    {
+        FindObjectOfType<AudioManager>().play("Jump2");
     }
 
     public void longFallAudio()
     {
-        playAudio(longFall);
+        FindObjectOfType<AudioManager>().play("LongFall");
     }
 }
